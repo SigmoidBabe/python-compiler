@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "python-project-compiler"
+version = "0.1.0"
+description = "Embed Python zip applications in Linux executables"
+readme = "README.md"
+requires-python = ">=3.9"
+
+[project.scripts]
+python-compiler = "python_compiler.__main__:main"
+
+[tool.setuptools]
+packages = ["python_compiler"]
+
+[tool.setuptools.package-data]
+python_compiler = ["launcher.c"]
